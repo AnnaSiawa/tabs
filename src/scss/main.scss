@@ -1,0 +1,58 @@
+@import "modules/vars.scss";
+@import "modules/font.scss";
+@import "modules/functions.scss";
+@import "modules/slider.scss";
+@import "modules/reset.scss";
+@import "modules/colors.scss";
+
+html, body {
+  font-size: 14px;
+  font-family: $primaryFont;
+  font-style: normal;
+}
+
+.wrapper {
+  min-height: 100%;
+  min-height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+
+  //  для body
+  //overflow-x: hidden;
+  //overflow: auto;
+  //justify-content: space-between;
+  //height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+  zoom: 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+body.lock {
+  overflow-y: hidden;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1588px; // - 100px padding = 1488 по макету
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  @media all and (min-width: $breakpoint-tablet-S) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@import "components/header.scss";
+@import "components/first-block.scss";
+@import "components/footer.scss";
+
+
+//или подключение с помощью маски (sassGlob) всех файлов из директории
+//@import "components/*.scss";

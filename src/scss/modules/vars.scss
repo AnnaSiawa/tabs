@@ -1,0 +1,38 @@
+$font-size-title1-mobile: 30px;
+$font-size-title1-tablet: 50px;
+$font-size-title1-desktop: 76px;
+$font-size-p: 22px;
+
+/////////////////////////////////////////////////////////////////
+
+// font-size
+$font-size-h1: 39px;
+$font-size-h1-desktop: 90px;
+$font-size-disc: 12px;
+$font-size-disc-desktop: 18px;
+$font-size-button-calc: 19px;
+$font-size-button-calc-desktop: 26px;
+
+/*Width breakpoints*/
+$breakpoint-fullhd: 1860px;
+$breakpoint-desktop-L: 1620px;
+$breakpoint-desktop-S: 1260px;
+$breakpoint-tablet-L: 1100px;
+$breakpoint-tablet-M: 991px;
+$breakpoint-tablet-S: 768px;
+$breakpoint-mobile-L: 480px;
+$breakpoint-mobile-S: 360px;
+
+/*fonts*/
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-Circe: Circe, $font-family-sans-serif;
+
+$primaryFont: $font-Circe;
+
+
+/*z-index*/
+$position-background: 1;
+$position-block: 2;
+$position-swiper: 3;
+$position-header-block: 3;

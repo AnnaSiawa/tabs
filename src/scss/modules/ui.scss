@@ -1,0 +1,14 @@
+@import "../modules/vars.scss";
+@import "../modules/font.scss";
+@import "../modules/functions.scss";
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+
+  //&:hover {
+  //  color: $color-text;
+  //  text-decoration: none;
+  //}
+}
+
