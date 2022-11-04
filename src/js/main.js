@@ -1,6 +1,7 @@
 import Swiper, {Navigation, Pagination} from 'swiper';
-
 Swiper.use([Navigation, Pagination]);
+
+let VanillaTabs = require('./modules/vanilla-tabs');
 
 window.onload = function () {
     const iconMenu = document.querySelector('.menu__icon');
@@ -94,10 +95,10 @@ window.onload = function () {
         }
     });
 
-
-// const sum = require("./module/sum.js");
-// // const sum = (a, b) => a + b;
-// console.log(sum(1, 10));
-// console.log(sum(12, 5));
-
+    const tabs = new VanillaTabs({
+        'selector': '#tabs-a',
+        'type': 'horizontal',
+        'responsiveBreak': 1260,
+        'activeIndex': 0
+    });
 }

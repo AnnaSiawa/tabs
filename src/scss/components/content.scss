@@ -4,25 +4,21 @@
 @import "../modules/ui.scss";
 @import "../modules/colors.scss";
 
-.header {
+.content {
   @include main-style-text;
 
   &_top {
-    background-color: $color-white;
-  }
-
-  &_middle {
-    background-color: $color-blue;
-  }
-
-  &_bottom {
-    background-color: $color-lilac;
+    //background-color: $color-white;
   }
 
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 40px;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      padding-top: 81px;
+    }
   }
 
 }
