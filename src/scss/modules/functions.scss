@@ -2,10 +2,21 @@
 @import "../modules/font.scss";
 
 @mixin main-style-text {
-  //font-family: Roboto;
+  font-family: $primaryFont;
+  font-size: $primary-font-size-m;
   font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    font-size: $primary-font-size-d;
+  }
+}
+
+@mixin font-tab {
   font-weight: 500;
-  font-size: 22px;
-  line-height: 26px;
-  //color: $color-text;
+  font-size: $font-size-tab-m;
+  line-height: 150%;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    font-size: $font-size-tab-d;
+  }
 }

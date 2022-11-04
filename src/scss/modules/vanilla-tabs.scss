@@ -1,3 +1,7 @@
+@import "./colors";
+@import "./vars";
+@import "./functions";
+
 /*------------------------------------------------------------------
 [VanillaTabs styles]
 - Table of contents -
@@ -28,6 +32,12 @@ $bg-secondary-color: #eee;
 .tabs__content {
 	display: block;
 	transition: opacity 0.2s;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    margin-bottom: 0;
+    border-radius: 0 20px 20px 20px;
+  }
 }
 
 .tabs.style__horizontal .tabs__content,
@@ -57,21 +67,21 @@ $bg-secondary-color: #eee;
 }
 
 .tabs.style__horizontal .tabs__nav .tabs__nav_link {
-	border: 1px solid $border-color;
 	border-bottom: 0;
-	margin: 0 3px;
-	padding: 10px;
-	background: $bg-secondary-color;
+	padding: 20px 24px;
 	display: block;
+  border-radius: 20px 20px 0 0;
+  background-color: $color-bg-tab;
+  @include font-tab;
 }
 
 .tabs.style__horizontal .tabs__nav .tabs__nav_link.is__active {
-	font-weight: bold;
 	background: $bg-color;
+  color: $color-link-tab;
+  border-radius: 20px 20px 0 0;
 }
 
 .tabs.style__horizontal .tabs__content.is__active {
-	border: 1px solid $border-color;
 	background: $bg-color;
 	padding: 18px;
 	position: relative;
@@ -143,22 +153,22 @@ $bg-secondary-color: #eee;
 .tabs.style__accordion .tabs__content .tabs__nav_link,
 .tabs.is__responsive .tabs__content .tabs__nav_link {
 	display: block;
-	padding: 18px;
+  padding: 22px 25px 21px 20px;
 	margin: -18px;
+  @include font-tab;
 }
 
 .tabs.style__accordion .tabs__nav_link.is__active,
 .tabs.is__responsive .tabs__nav_link.is__active {
-	font-weight: bold;
 	margin-bottom: 0;
+  color: $color-link-tab;
 }
 
 .tabs.style__accordion .tabs__content,
 .tabs.is__responsive .tabs__content {
-	border: 1px solid $border-color;
-	padding: 18px;
+  padding: 18px;
 	background: $bg-color;
-	margin: 0 0 15px 0 0;
+	margin: 0 0 15px 0;
 	display: block;
 	height: auto;
 	flex: none;
@@ -169,7 +179,7 @@ $bg-secondary-color: #eee;
 }
 
 .tabs.style__accordion .tabs__content_wrapper,
-.tabs.is__responsive .tabs__content_wrapper { 
+.tabs.is__responsive .tabs__content_wrapper {
 	height: 0;
 	transform: scaleY(0);
 	overflow: hidden;

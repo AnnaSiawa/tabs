@@ -5,8 +5,6 @@
 @import "../modules/colors.scss";
 
 .content {
-  @include main-style-text;
-
   &_top {
     //background-color: $color-white;
   }

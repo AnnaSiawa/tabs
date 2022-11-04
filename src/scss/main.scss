@@ -4,17 +4,11 @@
 @import "modules/slider";
 @import "modules/reset";
 @import "modules/colors";
-@import "modules/vanilla-tabs";
 
 @import "template/card-product";
 
 html, body {
-  font-size: $primary-font-size-m;
-  font-family: $primaryFont;
-  font-style: normal;
-  @media all and (min-width: $breakpoint-desktop-S) {
-    font-size: $primary-font-size-d;
-  }
+  @include main-style-text;
 }
 
 .wrapper {
@@ -58,7 +52,7 @@ body.lock {
 }
 
 @import "components/content";
-
+@import "modules/vanilla-tabs";
 
 //или подключение с помощью маски (sassGlob) всех файлов из директории
 //@import "components/*.scss";
