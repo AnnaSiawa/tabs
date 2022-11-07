@@ -2,7 +2,6 @@
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
 sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-Montserrat: Montserrat, $font-family-sans-serif;
-
 $primaryFont: $font-Montserrat;
 
 /*font-size*/
@@ -19,17 +18,6 @@ $primary-font-size-m: $font-size-text-m;
 $primary-font-size-d: $font-size-text-d;
 
 /*Width breakpoints*/
-$breakpoint-fullhd: 1860px;
-$breakpoint-desktop-L: 1620px;
-$breakpoint-desktop-S: 1260px; //
-$breakpoint-tablet-L: 1100px;
-$breakpoint-tablet-M: 991px;
-$breakpoint-tablet-S: 768px;
-$breakpoint-mobile-L: 480px;
-$breakpoint-mobile-S: 360px;
+$breakpoint-desktop-S: 1920px; //
+$breakpoint-mobile-S: 375px; //
 
-/*z-index*/
-$position-background: 1;
-$position-block: 2;
-$position-swiper: 3;
-$position-header-block: 3;

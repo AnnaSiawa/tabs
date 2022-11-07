@@ -3,7 +3,7 @@ class VanillaTabs {
         const DEFAULTS = {
             'selector': '.tabs',
             'type': 'horizontal',
-            'responsiveBreak': 1260,
+            'responsiveBreak': 1919,
             'activeIndex': 0
         }
         this.options = Object.assign(DEFAULTS, opts);

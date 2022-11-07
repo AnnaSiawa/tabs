@@ -1,7 +1,6 @@
 @import "modules/vars";
 @import "modules/font";
 @import "modules/functions";
-@import "modules/slider";
 @import "modules/reset";
 @import "modules/colors";
 
@@ -40,14 +39,13 @@ body.lock {
 }
 
 .container {
-  max-width: 1588px; // - 100px padding = 1488 по макету
+  max-width: 1920px;
   width: 100%;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
   @media all and (min-width: $breakpoint-desktop-S) {
-    padding-left: 102px;
-    padding-right: 102px;
+    padding: 0 102px;
   }
 }
 

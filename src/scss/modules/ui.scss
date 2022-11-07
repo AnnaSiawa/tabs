@@ -1,14 +1,44 @@
-@import "../modules/vars.scss";
-@import "../modules/font.scss";
-@import "../modules/functions.scss";
+@import "../modules/vars";
+@import "../modules/font";
+@import "../modules/functions";
+@import "../modules/colors";
 
 a {
   text-decoration: none;
   cursor: pointer;
-
-  //&:hover {
-  //  color: $color-text;
-  //  text-decoration: none;
-  //}
 }
 
+.btn {
+  width: 100%;
+  max-width: 351px;
+  background-color: $color-link-tab;
+  border-radius: 16px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    max-width: 128px;
+  }
+
+  button {
+    padding: 18px 0;
+    background-color: initial;
+    color: $color-white;
+  }
+}
+
+.textarea {
+  height: 52px;
+  width: 100%;
+  max-width: 351px;
+  padding: 15.5px 16px;
+  margin-bottom: 15px;
+  border: 1px solid $color-bg-tab;
+  border-radius: 16px;
+  resize: none;
+  outline: none;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    margin-bottom: 0;
+    margin-right: 24px;
+  }
+}

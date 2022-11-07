@@ -20,3 +20,30 @@
     font-size: $font-size-tab-d;
   }
 }
+
+@mixin font-tab-title {
+  font-weight: 700;
+  font-size: $font-size-title-m;
+  line-height: 150%;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    font-size: $font-size-title-d;
+  }
+}
+
+@mixin font-tab-p {
+  font-weight: 400;
+  font-size: $font-size-text-m;
+  line-height: 150%;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    font-size: $font-size-text-d;
+  }
+}
+
+@mixin font-subtitle {
+  font-weight: 500;
+  font-size: $font-size-title-disc-m;
+  line-height: 150%;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    font-size: $font-size-title-disc-d;
+  }
+}
