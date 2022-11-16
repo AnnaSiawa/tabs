@@ -13,15 +13,13 @@ const js = require('./task/js.js');
 const img = require('./task/img.js');
 const fonts = require('./task/fonts.js');
 const favicon = require('./task/favicon.js');
-// const deploy = require('./task/deploy.js');
 
 // const requireDir = require("require-dir");
 
-
+//deploy
 const {src, task}= require('gulp');
 const ghPages = require('gulp-gh-pages');
-
-task('deploy', () => src('./dist/**/*').pipe(ghPages()));
+task('deploy', () => src('./public/**/*').pipe(ghPages()));
 
 //сервер
 const server = () => {
@@ -59,7 +57,6 @@ exports.js = js;
 exports.img = img;
 exports.fonts = fonts;
 exports.favicon = favicon;
-// exports.deploy = deploy;
 
 //сборка
 exports.default = app.isProd
