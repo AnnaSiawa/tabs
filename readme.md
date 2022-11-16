@@ -6,3 +6,4 @@
 //запуск в режиме  продакшена из корня
     npm run build
 
+https://annasiawa.github.io/tabs/
