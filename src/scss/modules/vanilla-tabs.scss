@@ -158,7 +158,9 @@ $bg-secondary-color: #eee;
 .tabs.is__responsive .tabs__nav_link,
 .tabs.style__accordion .tabs__content .tabs__nav_link,
 .tabs.is__responsive .tabs__content .tabs__nav_link {
-	display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 22px 25px 21px 20px;
 	margin: -18px;
   @include font-tab;

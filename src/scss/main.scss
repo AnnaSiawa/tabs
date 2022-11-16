@@ -8,6 +8,7 @@
 
 html, body {
   @include main-style-text;
+  background-color: $color-bg;
 }
 
 .wrapper {
@@ -15,14 +16,7 @@ html, body {
   min-height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
-
-  //  для body
-  //overflow-x: hidden;
-  //overflow: auto;
-  //justify-content: space-between;
   height: 100vh;
-  background-color: $color-bg;
-
   position: relative;
   box-sizing: border-box;
   zoom: 1;

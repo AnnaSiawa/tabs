@@ -10,14 +10,19 @@ a {
 
 .btn {
   width: 100%;
-  max-width: 351px;
   background-color: $color-link-tab;
   border-radius: 16px;
   text-align: center;
   position: relative;
   cursor: pointer;
-  @media all and (min-width: $breakpoint-desktop-S) {
-    max-width: 128px;
+  transition: 0.5s ease;
+
+  &:hover {
+    background-color: $color-link-tab-hover;
+  }
+
+  &:active {
+    background-color: $color-link-tab-active;
   }
 
   button {
@@ -35,10 +40,24 @@ a {
   margin-bottom: 15px;
   border: 1px solid $color-bg-tab;
   border-radius: 16px;
+  color: $color-font-tab-title;
   resize: none;
   outline: none;
   @media all and (min-width: $breakpoint-desktop-S) {
     margin-bottom: 0;
     margin-right: 24px;
   }
+
+  &::-webkit-input-placeholder,
+  &:-moz-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder,
+  &::placeholder {
+    color: $color-bg-tab;
+  }
+
+  &:focus {
+    border: 1px solid $color-link-tab;
+  }
+
 }

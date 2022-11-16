@@ -45,7 +45,9 @@ class VanillaTabs {
                     let tabContent = tabItem.innerHTML;
                     tabItem.innerHTML = '<div class="tabs__content_wrapper">' + tabContent + '</div>';
                     // insert nav link for accordion navigation
-                    tabItem.insertAdjacentHTML('afterbegin', '<a class="tabs__nav_link">' + tabTitle + '</a>');
+                    // tabItem.insertAdjacentHTML('afterbegin', '<a class="tabs__nav_link"><span>' + tabTitle + '</span>' + '<span class="tabs__nav_img"><img src="../img/arrow.png" /></span></a>');
+                    tabItem.insertAdjacentHTML('afterbegin', '<a class="tabs__nav_link">' + tabTitle + '<span class="tabs__img"><img src="../img/arrow.png" /></span></a>');
+                    // tabItem.insertAdjacentHTML('afterbegin', '<a class="tabs__nav_link">' + tabTitle + '</a>');
                 }
             }
             // create horizontal / vertical tabs navigation elements
@@ -65,6 +67,7 @@ class VanillaTabs {
                 tabsElem.querySelectorAll('.tabs__nav > .tabs__nav_link')[activeTabIndex].classList.add('is__active');
                 tabsElem.querySelectorAll('.tabs__content')[activeTabIndex].classList.add('is__active');
                 tabsElem.querySelectorAll('.tabs__content > .tabs__nav_link')[activeTabIndex].classList.add('is__active');
+                tabsElem.querySelectorAll('.tabs__content > .tabs__nav_link > .tabs__img')[activeTabIndex].classList.add('is__active'); //
             }
         });
     }
@@ -89,11 +92,13 @@ class VanillaTabs {
                         activeTabIndex = Array.prototype.slice.call(e.target.parentElement.parentElement.children).indexOf(e.target.parentElement) - 1;
                     }
                     let tabsContent = tabsElem.getElementsByClassName('tabs__content'),
+                        tabsImg = tabsElem.getElementsByClassName('tabs__img'), //
                         mainNavLinks = tabsElem.querySelectorAll('.tabs__nav > .tabs__nav_link'),
                         accordionNavLinks = tabsElem.querySelectorAll('.tabs__content > .tabs__nav_link');
                     // toggle accordion panel
                     if ((tabsStyle == 'accordion' || tabsElem.classList.contains('is__responsive')) && e.target.classList.contains('is__active')) {
                         tabsContent[activeTabIndex].classList.remove('is__active');
+                        tabsImg[activeTabIndex].classList.remove('is__active');  //
                         mainNavLinks[activeTabIndex].classList.remove('is__active');
                         accordionNavLinks[activeTabIndex].classList.remove('is__active');
                         return;
@@ -101,9 +106,11 @@ class VanillaTabs {
                     // remove active class for inactive tabs
                     for (let i = 0; i < tabsContent.length; i++) {
                         tabsContent[i].classList.remove('is__active');
+                        tabsImg[i].classList.remove('is__active'); //
                     }
                     // add active class for a current (active) tab
                     tabsContent[activeTabIndex].classList.add('is__active');
+                    tabsImg[activeTabIndex].classList.add('is__active'); //
                     // add active classes and remove inactive for main nav links
                     mainNavLinks.forEach((el) => {
                         el.classList.remove('is__active');
@@ -119,6 +126,7 @@ class VanillaTabs {
             });
         });
     }
+
     // responsive: tabs to accordion
     handleResponsive() {
         let tabs = this.elems,

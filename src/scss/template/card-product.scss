@@ -105,19 +105,90 @@
     }
   }
 
-  &__list li {
-    list-style: decimal;
+  &__item {
 
     &:not(:last-child) {
       margin-bottom: 15px;
     }
+
+    &:last-child {
+      @media all and (min-width: $breakpoint-desktop-S) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__item.mountain {
+    list-style: decimal;
+  }
+
+  &__item.women {
+    list-style-image: url('../img/list-bike.png');
   }
 
   &__add-charact {
+    margin-bottom: 30px;
     @media all and (min-width: $breakpoint-desktop-S) {
       display: flex;
       align-items: center;
       justify-content: flex-start;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__confirm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 20px;
+    box-shadow: 0 10px 40px rgba(12, 12, 12, 0.1);
+    border-radius: 20px;
+    max-width: 351px;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      max-width: 726px;
+      justify-content: flex-start;
+    }
+  }
+
+  &__add-btn {
+    max-width: 351px;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      max-width: 128px;
+    }
+  }
+
+  &__confirm-btn {
+    max-width: 120px;
+
+    &:last-child {
+      background-color: $color-white;
+
+      &:hover {
+        background-color: $color-bg;
+      }
+
+      &:active {
+        background-color: $color-bg;
+      }
+
+      button {
+        color: $color-font-tab-title;
+      }
+    }
+
+    @media all and (min-width: $breakpoint-desktop-S) {
+      margin-right: 10px;
+    }
+  }
+
+  &__confirm-btn.disabled {
+    &:first-child {
+      background-color: $color-link-tab-disable;
+      pointer-events: none;
+    }
+
+    &:last-child.disabled {
+      pointer-events: none;
     }
   }
 }

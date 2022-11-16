@@ -20,8 +20,11 @@
     @media all and (min-width: $breakpoint-desktop-S) {
       flex: 0 1 50%;
     }
-  }
 
+    &__img.is__active {
+      transform: rotate(180deg);
+    }
+  }
 }
 
 

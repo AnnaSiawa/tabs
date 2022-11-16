@@ -1,7 +1,9 @@
 import Swiper, {Navigation, Pagination} from 'swiper';
 Swiper.use([Navigation, Pagination]);
 
-let VanillaTabs = require('./modules/vanilla-tabs');
+let vanillaTabs = require('./modules/vanilla-tabs');
+let showMarkers = require('./modules/list-markers');
+let propertyOutput = require('./modules/property-output');
 
 window.onload = function () {
     const iconMenu = document.querySelector('.menu__icon');
@@ -30,10 +32,13 @@ window.onload = function () {
         });
     }
 
-    const tabs = new VanillaTabs({
+    const tabs = new vanillaTabs({
         'selector': '#tabs-a',
         'type': 'horizontal',
         'responsiveBreak': 1919,
         'activeIndex': 0
     });
+
+    showMarkers();
+    propertyOutput();
 }
