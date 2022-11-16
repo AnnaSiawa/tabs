@@ -44,5 +44,9 @@ module.exports = {
         src: pathSrc + "/img/favicon/favicon.svg",
         watch: pathSrc + "/img/favicon/favicon.svg",
         dest: pathDest
+    },
+
+    deploy: {
+        dest: pathDest
     }
 }

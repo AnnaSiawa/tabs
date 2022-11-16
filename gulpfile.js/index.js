@@ -5,7 +5,7 @@ const browserSync = require("browser-sync").create();
 const path = require("./config/path.js");
 const app = require("./config/app.js");
 
-//задачи 
+//задачи
 const clear = require('./task/clear.js');
 const html = require('./task/html.js');
 const scss = require('./task/scss.js');
@@ -13,8 +13,15 @@ const js = require('./task/js.js');
 const img = require('./task/img.js');
 const fonts = require('./task/fonts.js');
 const favicon = require('./task/favicon.js');
+// const deploy = require('./task/deploy.js');
 
 // const requireDir = require("require-dir");
+
+
+const {src, task}= require('gulp');
+const ghPages = require('gulp-gh-pages');
+
+task('deploy', () => src('./dist/**/*').pipe(ghPages()));
 
 //сервер
 const server = () => {
@@ -52,6 +59,7 @@ exports.js = js;
 exports.img = img;
 exports.fonts = fonts;
 exports.favicon = favicon;
+// exports.deploy = deploy;
 
 //сборка
 exports.default = app.isProd
