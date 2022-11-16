@@ -1,6 +1,3 @@
-import Swiper, {Navigation, Pagination} from 'swiper';
-Swiper.use([Navigation, Pagination]);
-
 let vanillaTabs = require('./modules/vanilla-tabs');
 let showMarkers = require('./modules/list-markers');
 let propertyOutput = require('./modules/property-output');
