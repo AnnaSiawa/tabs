@@ -45,8 +45,7 @@ class VanillaTabs {
                     let tabContent = tabItem.innerHTML;
                     tabItem.innerHTML = '<div class="tabs__content_wrapper">' + tabContent + '</div>';
                     // insert nav link for accordion navigation
-                    // tabItem.insertAdjacentHTML('afterbegin', '<a class="tabs__nav_link"><span>' + tabTitle + '</span>' + '<span class="tabs__nav_img"><img src="../img/arrow.png" /></span></a>');
-                    tabItem.insertAdjacentHTML('afterbegin', '<a class="tabs__nav_link">' + tabTitle + '<span class="tabs__img"><img src="../img/arrow.png" /></span></a>');
+                    tabItem.insertAdjacentHTML('afterbegin', '<a class="tabs__nav_link">' + tabTitle + '<span class="tabs__img"><img src="../img/arrow.webp" /></span></a>');
                     // tabItem.insertAdjacentHTML('afterbegin', '<a class="tabs__nav_link">' + tabTitle + '</a>');
                 }
             }
